@@ -16,42 +16,6 @@
   </header>
   <!-- .profile-wrapper -->
 
-  <!-- 아바타 클릭 시 이미지 변경 스크립트 -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const avatarLink = document.getElementById("avatar");
-      const avatarImg = avatarLink ? avatarLink.querySelector("img") : null;
-      
-      if (avatarImg) {
-        // 원래 이미지 경로 (config.yml에 설정된 이미지)
-        const firstImg = avatarImg.src;
-        // 두 번째 이미지 경로 (Jekyll의 파싱을 거치도록 설정하여 GitHub Pages 환경에서도 경로가 절대로 꼬이지 않게 함)
-        // _includes/sidebar.html 파일 중
-        const secondImg = "https://rainier102625.github.io/assets/img/RealDW.jpg";
-        
-        // 🚀 [수정] 두 번째 이미지를 미리 로딩(Preload)하여 클릭 시 즉시 띄우기
-        const preloadedImg = new Image();
-        preloadedImg.src = secondImg;
-        
-        let isFirstImg = true;
-        
-        avatarLink.addEventListener("click", function(event) {
-          event.preventDefault(); // 기본 기능인 홈 화면 이동을 막습니다. 
-          isFirstImg = !isFirstImg;
-          
-          // 기존 transition(hover 확대 0.5s)을 덮어버리지 않도록 opacity 전용 transition 설정
-          avatarImg.style.transition = "opacity 0.15s ease, transform 0.5s";
-          avatarImg.style.opacity = 0;
-          
-          setTimeout(() => {
-            avatarImg.src = isFirstImg ? firstImg : secondImg;
-            avatarImg.style.opacity = 1;
-          }, 150);
-        });
-      }
-    });
-  </script>
-
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
       <!-- home -->
