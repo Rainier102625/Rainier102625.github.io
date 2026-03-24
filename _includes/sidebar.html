@@ -35,11 +35,11 @@
         let isFirstImg = true;
         
         avatarLink.addEventListener("click", function(event) {
-          event.preventDefault(); // 기본 기능인 홈 화면 이동을 막습니다.
+          event.preventDefault(); // 기본 기능인 홈 화면 이동을 막습니다. 
           isFirstImg = !isFirstImg;
           
-          // 🚀 [수정] 페이드 효과 애니메이션을 0.3초에서 0.15초로 매우 빠르게 단축
-          avatarImg.style.transition = "opacity 0.15s ease";
+          // 기존 transition(hover 확대 0.5s)을 덮어버리지 않도록 opacity 전용 transition 설정
+          avatarImg.style.transition = "opacity 0.15s ease, transform 0.5s";
           avatarImg.style.opacity = 0;
           
           setTimeout(() => {
