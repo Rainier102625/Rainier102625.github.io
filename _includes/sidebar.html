@@ -25,8 +25,8 @@
       if (avatarImg) {
         // 원래 이미지 경로 (config.yml에 설정된 이미지)
         const firstImg = avatarImg.src;
-        // 두 번째 이미지 경로
-        const secondImg = "/assets/img/RealDW.jpg"; 
+        // 두 번째 이미지 경로 (Jekyll의 파싱을 거치도록 설정하여 GitHub Pages 환경에서도 경로가 절대로 꼬이지 않게 함)
+        const secondImg = "{{ '/assets/img/RealDW.jpg' | relative_url }}"; 
         
         // 🚀 [수정] 두 번째 이미지를 미리 로딩(Preload)하여 클릭 시 즉시 띄우기
         const preloadedImg = new Image();
