@@ -1,6 +1,8 @@
 # The Site Configuration
 
 # Import the theme
+
+# 로컬 run 명령어 bundle exec jekyll s
 theme: jekyll-theme-chirpy
 
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
@@ -98,7 +100,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: assets/img/ArImogeDW.jpg
+avatar: assets/img/ArImoge.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.

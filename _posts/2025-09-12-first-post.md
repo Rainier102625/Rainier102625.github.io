@@ -1,9 +1,18 @@
 ---
 title: "나의 첫 번째 블로그 글"
 date: 2026-03-24 19:00:00 +0900
-categories: [Backend, Java]
-tags: [java, spring, learning]
+categories: [Project]
+tags: [Spring boot, Next.js, MySQL]
 ---
+
+### 📋 Project Overview
+
+| 항목 | 내용 |
+| :--- | :--- |
+| 👤 **Role** | `FE` `Project Manager` |
+| 🔗 **Link** | [프로젝트 바로가기](https://github.com/사용자아이디/레포지토리) |
+| Stack | `Spring Boot` `Next.js` `MySQL`|
+
 
 여기에 글 내용을 쓰시면 됩니다!
 
